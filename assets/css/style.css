@@ -8,15 +8,20 @@ body{
     font-size: 2rem;
     color:#eee;
     line-height: 1.5;
+    display: block;
 }
 html{
     scroll-behavior: smooth;
-    font-size: 70%;
+    font-size: 55%;
+    background-color: lightgrey;
 }
+
+/* Navbar style displaying links to the left and heading to the right*/
+
 #navbar{
     display: flex;
     justify-content: flex-end;
-    position: fixed;
+    position: sticky;
     top:0;
     left:0;
     width:100%;
@@ -42,21 +47,57 @@ a{
 .nav-list a:hover{
     background-color:red;
 }
-form{
-    position: relative;
-    margin-top:300px;
-    padding:0;
-}
-
-h1,
-h2,
-h3{
-    margin: 0;
-}
 
 #navbar h1{
-    position: absolute;
-    display: block;
+    align-self: center;
+    background-color: darkred;
+    margin-right: auto;
+    padding-right: 4rem;;
+    padding-left: 2rem;
+}
+
+/* Hero banner style */
+
+.hero-banner{
+    background-image: url("../images/Hero-Banner-Placeholder-Light-1024x480-1.png");
     width: 100%;
-    padding: 10px 0 0 10px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Wrapper style */
+
+.page-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-section{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.page-section h2{
+    border-right: 5px solid black;
+    width: 30%;
+}
+
+article{
+    width:70%;
+}
+
+.grid{
+    display: grid;
+    background-color: red;
+    width: 70%;
+    height:200px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "main-work main-work"
+    "smaller-work smaller-work";
 }
