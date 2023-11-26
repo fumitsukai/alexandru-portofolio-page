@@ -75,6 +75,7 @@ a{
     flex-direction: column;
 }
 
+/* General section style */
 .page-section{
     display: flex;
     flex-direction: row;
@@ -83,21 +84,51 @@ a{
 
 .page-section h2{
     border-right: 5px solid black;
-    width: 30%;
+    width: 20%;
 }
 
 article{
-    width:70%;
+    width:80%;
 }
 
+/* Work section style */
 .grid{
     display: grid;
-    background-color: red;
-    width: 70%;
-    height:200px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    grid-template-rows: 500px 250px 250px;
+    /*grid-template-columns: 1fr 1fr;*/
     grid-template-areas: 
     "main-work main-work"
-    "smaller-work smaller-work";
+    "otherwork1 otherwork2"
+    "otherwork3 otherwork4";
+    margin-left: 4rem;
+}
+
+.main-work{
+    grid-area: main-work;
+    background-color: green;
+}
+
+.otherWork-1{
+    grid-area: otherwork1;
+    background-color: yellow;
+}
+
+.otherWork-2{
+    background-color: blue;
+    grid-area: otherwork2;
+}
+
+.otherWork-3{
+    background-color: blue;
+    grid-area: otherwork3;
+}
+
+.otherWork-4{
+    background-color: blue;
+    grid-area: otherwork4;
+}
+
+.gridElement{
+    margin: 1.5rem;
 }
