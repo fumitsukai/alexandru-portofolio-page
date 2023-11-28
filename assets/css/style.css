@@ -58,6 +58,11 @@ a{
     color: var(--beige);
 }
 
+img{
+    margin-right: auto;
+    border-radius: 50%;
+}
+
 /* Hero banner style */
 
 .hero-banner{
@@ -117,7 +122,7 @@ article{
 .grid{
     display: grid;
     width: 75%;
-    grid-template-rows: 500px 250px 250px;
+    grid-template-rows: 31.25em 15.625em 15.625em;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "main-work main-work"
@@ -130,41 +135,26 @@ article{
 .main-work{
     grid-area: main-work;
     background-image: url("../images/wip.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .otherWork-1{
     grid-area: otherwork1;
     background-image: url("../images/wip.jpeg");
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-position: center;
 }
 
 .otherWork-2{
     background-image: url("../images/wip.jpeg");
     grid-area: otherwork2;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .otherWork-3{
     background-image: url("../images/wip.jpeg");
     grid-area: otherwork3;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .otherWork-4{
     background-image: url("../images/wip.jpeg");
     grid-area: otherwork4;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .gridElement{
@@ -176,6 +166,9 @@ article{
     justify-content: flex-start;
     border-radius: 10px;
     opacity: 0.7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .titlebox{
@@ -210,6 +203,61 @@ article{
     font-size: 4rem;
 }
 
-.contactbox a{
-    border-bottom: 1px solid var(--coralred);
+
+/* Footer Style */
+
+footer{
+    height: 6.5em;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid var(--coralred);
+    align-items: center;
+}
+
+/* Potrait media query */
+
+@media only screen and (max-width:768px) {
+    #navbar{
+        justify-content: center;
+    }
+    #navbar h1{
+        display: none;
+    }
+    .hero-banner{
+        display: none;
+    }
+    .page-section{
+        flex-direction: column;
+        text-align: center;
+        width: auto;
+        padding: 2rem;
+    }
+    .page-section h2{
+        writing-mode: horizontal-tb;
+        border-bottom: 1px solid var(--coralred);
+        border-right: 0;
+        width:auto;
+        text-align: center;
+    }
+    article{
+        width: auto;
+        padding: 2rem;
+    }
+    .grid{
+        width: auto;
+        padding: 2rem;
+        display: block;
+    }
+    .contactbox{
+        padding: 2rem;
+        flex-direction: column;
+    }
+    .contactbox a{
+        width: auto;
+        padding: 2rem;
+        border: 0;
+    }
+    img{
+        display: none;
+    }
 }
