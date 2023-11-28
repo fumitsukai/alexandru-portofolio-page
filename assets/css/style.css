@@ -2,18 +2,21 @@
     padding: 0;
     margin:0;  
     box-sizing: border-box; 
+    --darkblue:#001233;
+    --coralred:#FF595A;
+    --beige:#CAC0B3;
 }
 body{
     font-family:Helvetica, sans-serif;
     font-size: 2rem;
-    color:#eee;
+    color:var(--beige);
     line-height: 1.5;
     display: block;
 }
 html{
     scroll-behavior: smooth;
     font-size: 55%;
-    background-color: lightgrey;
+    background-color:var(--darkblue);
 }
 
 /* Navbar style displaying links to the left and heading to the right*/
@@ -25,7 +28,7 @@ html{
     top:0;
     left:0;
     width:100%;
-    background-color: black;
+    background-color: var(--darkblue);
     z-index:999;
 }
 .nav-list{
@@ -42,29 +45,40 @@ ul{
 }
 a{
     text-decoration: none;
-    color:#eee;
+    color:var(--beige);
 }
 .nav-list a:hover{
-    background-color:red;
+    background-color:var(--coralred);
+    color: var(--darkblue);
 }
 
 #navbar h1{
     align-self: center;
-    background-color: darkred;
     margin-right: auto;
-    padding-right: 4rem;;
-    padding-left: 2rem;
+    color: var(--beige);
 }
 
 /* Hero banner style */
 
 .hero-banner{
-    background-image: url("../images/Hero-Banner-Placeholder-Light-1024x480-1.png");
+    background-image: url("../images/hero-banner.png");
     width: 100%;
     height: 150px;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    display: flex;
+    justify-content: flex-end;
+    background-position: top;
+}
+
+.hero-banner h2{
+    position: relative;
+    width: fit-content;
+    background-color:var(--coralred);
+    top: 3.5em;
+    padding: 0.5rem;
+    right:1.5em;
+    color: var(--darkblue);
 }
 
 /* Wrapper style */
@@ -73,6 +87,7 @@ a{
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-top: 4em;
 }
 
 /* General section style */
@@ -84,8 +99,13 @@ a{
 }
 
 .page-section h2{
-    border-right: 5px solid black;
+    border-right: 1px solid var(--coralred);
+    padding-right: 2.5rem;
+    font-size: 5rem;
     width: 20%;
+    writing-mode: vertical-rl;
+    color: var(--coralred);
+    border-radius: 20px;
 }
 
 article{
@@ -104,53 +124,92 @@ article{
     "otherwork1 otherwork2"
     "otherwork3 otherwork4";
     margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .main-work{
     grid-area: main-work;
-    background-color: green;
+    background-image: url("../images/wip.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .otherWork-1{
     grid-area: otherwork1;
-    background-color: yellow;
+    background-image: url("../images/wip.jpeg");
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: center;
 }
 
 .otherWork-2{
-    background-color: blue;
+    background-image: url("../images/wip.jpeg");
     grid-area: otherwork2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .otherWork-3{
-    background-color: blue;
+    background-image: url("../images/wip.jpeg");
     grid-area: otherwork3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .otherWork-4{
-    background-color: blue;
+    background-image: url("../images/wip.jpeg");
     grid-area: otherwork4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .gridElement{
     margin: 1.5rem;
     cursor: pointer;
-    border: 2px solid black;
+    border: 5px solid var(--beige);
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
-}
-
-.page-section h2{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2.5rem;
-    font-size: 5rem;
-    padding-left: 5em;
+    border-radius: 10px;
+    opacity: 0.7;
 }
 
 .titlebox{
-    background-color: red;
+    background-color: var(--coralred);
     width: fit-content;
     margin-bottom: 2em;
     padding: 1rem;
+    color: var(--darkblue);
+    opacity: 1 !important;
+}
+
+.gridElement:hover{
+    opacity: 1;
+}
+
+
+/* About section style */
+
+#about p{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-bottom: 1rem;
+}
+
+/* Contact me section style */
+
+.contactbox{
+    display: flex;
+    justify-content:space-around;
+    width: 80%;
+    align-self: center;
+    font-size: 4rem;
+}
+
+.contactbox a{
+    border-bottom: 1px solid var(--coralred);
 }
