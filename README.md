@@ -6,19 +6,19 @@ This is a simple website to showcase my applications.
 
 It has a header and hero image with links to the sections at the top.
 
-![navbar and hero image](../alexandru-portofolio-page/assets/images/header.png)
+![navbar and hero image](/assets/images/header.png)
 
 It features an about me section:
 
-![about me section](../alexandru-portofolio-page/assets/images/about.png)
+![about me section](/assets/images/about.png)
 
 A Work section with a grid showcasing the applications with links to them.
 
-![work section](../alexandru-portofolio-page/assets/images/work.png)
+![work section](/assets/images/work.png)
 
 And a contact and footer
 
-![contact me section and footer](../alexandru-portofolio-page/assets/images/contact.png)
+![contact me section and footer](/assets/images/contact.png)
 
 ## Installation
 
